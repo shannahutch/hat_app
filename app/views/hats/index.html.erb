@@ -2,12 +2,15 @@
 
 <% @hats.each do |hat| %>
   <%=hat.name %><br>
-    <%= hat.description %><br>
+  <%= hat.description %><br>
   <%= link_to 'Edit', edit_hat_path(hat) %> <br>
-  <%= link_to 'Delete', delte_hat_path
+
+  <%= link_to 'Delete', hat_path(hat.id), method: :delete %>
+  <!-- #link_to normally automatically to get requests so you have to chenge the #method to delete -->
    <br>
 
 
 
 <% end %>
-<%= link_to 'New Hat', new_hat_path %>
+<br>
+<%= link_to 'Make a New Hat', new_hat_path %>

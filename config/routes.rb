@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+ root 'hats#index'
+
+  resources :hats
+
+#     Prefix Verb   URI Pattern              Controller#Action
+#     root GET    /                        hats#index
+#     hats GET    /hats(.:format)          hats#index
+#          POST   /hats(.:format)          hats#create
+#  new_hat GET    /hats/new(.:format)      hats#new
+# edit_hat GET    /hats/:id/edit(.:format) hats#edit
+#      hat GET    /hats/:id(.:format)      hats#show
+#          PATCH  /hats/:id(.:format)      hats#update
+#          PUT    /hats/:id(.:format)      hats#update
+#          DELETE /hats/:id(.:format)      hats#destroy
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

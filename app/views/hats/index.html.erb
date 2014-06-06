@@ -1,0 +1,13 @@
+<h1>All the Hats </h1>
+
+<% @hats.each do |hat| %>
+  <%=hat.name %><br>
+    <%= hat.description %><br>
+  <%= link_to 'Edit', edit_hat_path(hat) %> <br>
+  <%= link_to 'Delete', delte_hat_path
+   <br>
+
+
+
+<% end %>
+<%= link_to 'New Hat', new_hat_path %>
